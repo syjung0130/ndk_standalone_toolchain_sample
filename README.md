@@ -32,8 +32,18 @@ NDK sample code repository (https://github.com/googlesamples/android-ndk)
 usage: make_standalone_toolchain.py [-h] --arch
                                     {arm,arm64,mips,mips64,x86,x86_64}
                                     [--api API]
-                                    [--stl {gnustl,libc++,stlport}]
                                     [--unified-headers | --deprecated-headers]
                                     [--force] [-v]
                                     [--package-dir PACKAGE_DIR | --install-dir INSTALL_DIR]
 </pre>
+
+ - selinux 관련 설정
+기본적으로 selinux옵션을 Enforcing을 사용하고 있음..
+옵션 변경은 setenforce 0 으로 permissive모드로 변경 가능, setenforce 1으로 enforce 모드로 변경 가능함.
+ - 현재 selinux 설정값 가져오기  
+ $ getenforce  
+또는  
+getprop |grep selinux
+
+ - selinux 옵션을 permissive 모드로 변경  
+ $ setenforce 0
