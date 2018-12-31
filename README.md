@@ -1,3 +1,10 @@
+# Docker build  
+ - docker build -t ndk-sample:imx-1 .
+  
+# Run Docker container 
+  - docker run -it --volume="$PWD/../..:/workdir/ndk_single_example" --volume="$PWD/build:/workdir/build" ndk-sample:imx-1
+  - or ./run_container.sh
+
 # (참고) NDK 관련 내용
  - NDK Standalone C++ STL Support(https://developer.android.com/ndk/guides/standalone_toolchain?hl=en)  
  (C++ STL Support 절 참고)  
