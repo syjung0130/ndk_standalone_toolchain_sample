@@ -1,4 +1,5 @@
 # Docker build  
+ - cd docker
  - docker build -t ndk-sample:imx-1 .
   
 # Run Docker container 
